@@ -26,7 +26,7 @@ server {
 	
 	# Change the default 500 error page to a custom made error page
 
-	error_page 500 502 503 504 /server_error.html;
+	error_page 500 /server_error.html;
 
 	location =/server_error.html {
 		
