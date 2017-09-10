@@ -1,0 +1,40 @@
+# First Server Block
+
+server {
+	
+	# server will accept request from this port by default
+
+	listen 80;
+	
+	# index file to be hosted is in this path
+
+	root /home/akash1693/Level_5_Assignment/Code;
+
+	index index.html;
+	
+	#change the default 404 error page to a custom made error page
+
+	error_page 404 /page_not_found.html;
+
+	location =/page_not_found.html {
+		
+		root /home/akash1693/Level_5_Assignment/Code;
+		
+		internal;
+	
+	} 
+	
+	# Change the default 500 error page to a custom made error page
+
+	error_page 500 502 503 504 /server_error.html;
+
+	location =/server_error.html {
+		
+		root /home/akash1693/Level_5_Assignment/Code;
+		
+		internal;
+	
+	}
+
+}
+
